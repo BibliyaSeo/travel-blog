@@ -1,5 +1,5 @@
-import Hero from "../components/home/hero";
-import Layout from "../components/layout";
+import Hero from "../components/home/Hero";
+import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
 export default function Home() {
