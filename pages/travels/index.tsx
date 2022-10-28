@@ -1,8 +1,8 @@
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
 import axios from "axios";
-import { TOKEN, DATABASE_ID } from "../config";
-import TravelItem from "../components/TravelItem";
+import Layout from "../../components/Layout";
+import SEO from "../../components/SEO";
+import TravelItem from "../../components/TravelItem";
+import { DATABASE_ID, TOKEN } from "../../config";
 
 export default function Travels({ travels }: any) {
   return (
@@ -15,7 +15,7 @@ export default function Travels({ travels }: any) {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 m-6 gap-8 w-full">
           {travels.map((item: any) => (
-            <TravelItem key={item.id} data={item} />
+            <TravelItem key={item.id} data={item} id={item.properties.ContentId?.number} />
           ))}
         </div>
       </div>
@@ -42,7 +42,6 @@ export async function getServerSideProps() {
   try {
     const res = await axios.request(options);
     travels = res.data.results;
-    // const travelNames = travels.map((travel: any) => travel.properties.Name.title[0].plain_text);
   } catch (err) {
     console.log(err);
   }

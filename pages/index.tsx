@@ -1,4 +1,4 @@
-import Hero from "../components/home/Hero";
+import HomeContent from "../components/home/HomeContent";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <Layout>
       <SEO title="Home" content="여행, 어디 갈까?" />
-      <section className="flex min-h-screen flex-col items-center justify-center text-gray-600 body-font">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <Hero />
+      <section className="min-h-screen flex flex-col">
+        <div className="container mx-auto min-h-screen flex px-5 py-10 md:flex-row flex-col items-center justify-center">
+          <HomeContent />
         </div>
       </section>
     </Layout>

@@ -4,34 +4,36 @@ import DarkModeToggleButton from "./DarkModeToggleButton";
 export default function Header() {
   return (
     <>
-      <header className="text-gray-600 body-font">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <Link legacyBehavior href={"/"}>
-            <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <span className="ml-3 text-xl">리페를 새롭게</span>
-            </a>
-          </Link>
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <Link legacyBehavior href={"/"}>
-              <a className="mr-5 hover:text-gray-900">홈</a>
-            </Link>
-            <Link legacyBehavior href={"/travels"}>
-              <a className="mr-5 hover:text-gray-900">여행</a>
-            </Link>
-          </nav>
-          <DarkModeToggleButton />
+      <header>
+        <div className="container mx-auto flex flex-wrap px-5 py-10 flex-col sm:flex-row items-center justify-between">
+          <div className="hidden sm:flex sm:flex-col my-english-font4">
+            <span>2022</span>
+            <span>Oct 28</span>
+          </div>
+          <div className="flex flex-col">
+            <div className="flex w-full justify-end pr-2 pb-1">
+              <span className="my-english-font1 text-sm text-sky-300">personal blog</span>
+            </div>
+            <div>
+              <h1 className="font-bold my-english-font4 text-3xl text-sky-400">Renew My Life</h1>
+            </div>
+            <div className="flex w-full justify-end pr-8 pt-1">
+              <span className="my-english-font1 text-gray-700">BibliyaSeo</span>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="hidden sm:flex sm:justify-end">
+              <DarkModeToggleButton />
+            </div>
+            <nav className="mt-6 mb-0 sm:mt-4 my-english-font1">
+              <Link legacyBehavior href={"/"}>
+                <a className="mr-2">HOME</a>
+              </Link>
+              <Link legacyBehavior href={"/travels"}>
+                <a className="ml-2">TRIP</a>
+              </Link>
+            </nav>
+          </div>
         </div>
       </header>
     </>
