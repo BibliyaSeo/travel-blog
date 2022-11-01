@@ -1,14 +1,22 @@
+import dayjs from "dayjs";
 import Link from "next/link";
 import DarkModeToggleButton from "./DarkModeToggleButton";
 
 export default function Header() {
+  const now = dayjs();
+  const year = now.format("YYYY");
+  const month = now.format("MMM").toUpperCase();
+  const date = now.format("DD");
+
   return (
     <>
       <header>
         <div className="container mx-auto flex flex-wrap px-5 py-10 flex-col sm:flex-row items-center justify-between">
           <div className="hidden sm:flex sm:flex-col my-english-font4">
-            <span>2022</span>
-            <span>Oct 28</span>
+            <span>{year}</span>
+            <span className="text-sm">
+              {month} {date}
+            </span>
           </div>
           <div className="flex flex-col">
             <div className="flex w-full justify-end pr-2 pb-1">
