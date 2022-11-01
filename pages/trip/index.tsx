@@ -1,24 +1,14 @@
 import axios from "axios";
+import Link from "next/link";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
-import TravelItem from "../../components/TravelItem";
 import { DATABASE_ID, TOKEN } from "../../config";
 
 export default function Travels({ travels }: any) {
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen px-5 mb-10">
-        <SEO title="Travel" content="여행" />
-        <h1 className="text-4xl font-bold sm:text-6xl">
-          총 여행 데이터:
-          <span className="pl-4 text-blue-500">{travels.length}</span>
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 m-6 gap-8 w-full">
-          {travels.map((item: any) => (
-            <TravelItem key={item.id} data={item} id={item.properties.ContentId?.number} />
-          ))}
-        </div>
-      </div>
+      <SEO title="TRIP" content="여행" />
+      <div className="min-h-screen"></div>
     </Layout>
   );
 }

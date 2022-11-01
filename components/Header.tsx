@@ -29,7 +29,7 @@ export default function Header() {
               <Link legacyBehavior href={"/"}>
                 <a className="mr-2">HOME</a>
               </Link>
-              <Link legacyBehavior href={"/travels"}>
+              <Link legacyBehavior href={"/trip"}>
                 <a className="ml-2">TRIP</a>
               </Link>
             </nav>

@@ -3,14 +3,14 @@ import Router from "next/router";
 
 const imageCss = { width: "100%", height: "65%" };
 
-export default function TravelItem({ data, id }: any) {
+export default function TripItem({ data, id }: any) {
   const travelName = data.properties.Name.title[0].plain_text;
   const imgSrc = data.cover.file?.url || data.cover.external.url;
 
   const goToDetail = (e: any) => {
     e.preventDefault;
     console.log(e.currentTarget.id);
-    Router.push(`/travels/${e.currentTarget.id}`);
+    Router.push(`/trip/${e.currentTarget.id}`);
   };
 
   return (
