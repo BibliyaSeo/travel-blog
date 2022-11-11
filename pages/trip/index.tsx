@@ -11,7 +11,12 @@ export default function Travels({ trips }: any) {
   return (
     <Layout>
       <SEO title="TRIP" content="여행" />
-      <div className="min-h-screen">{/* <TripItem data={trips} /> */}</div>
+      <div className="min-h-screen">
+        <div>
+          <span>Japan</span>
+          <span>Europe</span>
+        </div>
+      </div>
     </Layout>
   );
 }
